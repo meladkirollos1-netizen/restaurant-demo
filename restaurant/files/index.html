@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>مطعم دفء — مشاوي وأطباق شرقية</title>
+  <meta name="description" content="مطعم دفء: مشاوي على الفحم وأطباق شرقية وقعدة عائلية. موقع تجريبي.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#7a1f1f">
+  <!-- Link preview (WhatsApp / Facebook) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ar_AR">
+  <meta property="og:title" content="مطعم دفء — مشاوي وأطباق شرقية (موقع تجريبي)">
+  <meta property="og:description" content="تصميم تجريبي لموقع مطعم: منيو بأقسام، مواعيد، وحجز طاولة عبر واتساب.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1200&amp;q=70">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+  <!-- Tajawal font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome icons (falls back to a second CDN if the first fails) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"
+        onerror="this.onerror=null;this.href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css'">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== Sticky header ===== -->
+<header class="site-header">
+  <div class="container bar">
+    <a href="#home" class="logo"><i class="fa-solid fa-fire-flame-curved"></i> مطعم دفء</a>
+    <button class="menu-btn" aria-label="القائمة" aria-expanded="false" aria-controls="nav"><i class="fa-solid fa-bars"></i></button>
+    <nav id="nav" class="nav">
+      <a href="#about">عن المطعم</a>
+      <a href="#menu">المنيو</a>
+      <a href="#hours">المواعيد</a>
+      <a href="#gallery">المعرض</a>
+      <a href="#reviews">آراء الزباين</a>
+      <a href="#reserve" class="btn btn-fire small">احجز طاولة</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ===== Full-screen hero (background image is set in style.css) ===== -->
+<section id="home" class="hero">
+  <div class="container">
+    <h1>مشاوي على الفحم،<br>وسفرة تجمّع العيلة</h1>
+    <p class="lead">لحوم طازجة، نار هادية، وطعم يفكّرك ببيت العيلة. أهلًا بيك في دفء.</p>
+    <div class="cta">
+      <a href="#menu" class="btn btn-fire">عرض المنيو</a>
+      <a href="https://wa.me/201000000000" class="btn btn-ghost" target="_blank" rel="noopener" data-wa><i class="fa-brands fa-whatsapp"></i> اطلب عبر واتساب</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== About ===== -->
+<section id="about" class="section">
+  <div class="container about">
+    <div class="arch reveal"><img alt="صالة مطعم دفء" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=70" loading="lazy"></div>
+    <div class="reveal">
+      <h2>مطبخ مفتوح وقعدة دافية</h2>
+      <p>بدأ دفء من فكرة بسيطة: أكل بيتي بطعم المشاوي الحقيقية. بنشتغل بفحم طبيعي ولحوم طازجة كل يوم، وبنحضّر كل طبق على أصوله.</p>
+      <ul class="feats">
+        <li><i class="fa-solid fa-fire"></i> فحم طبيعي وتسوية على نار هادية</li>
+        <li><i class="fa-solid fa-seedling"></i> خضار وتوابل طازجة كل صباح</li>
+        <li><i class="fa-solid fa-people-roof"></i> جلسات عائلية وركن مخصص للأطفال</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Popular dishes (filled by script.js) ===== -->
+<section id="popular" class="section band-red">
+  <div class="container">
+    <h2 class="reveal">الأكثر طلبًا</h2>
+    <div id="popularGrid" class="dishes fit"></div>
+  </div>
+</section>
+
+<!-- ===== Menu with category tabs ===== -->
+<section id="menu" class="section">
+  <div class="container">
+    <h2 class="reveal">المنيو</h2>
+    <div class="tabs" role="tablist" aria-label="أقسام المنيو">
+      <button role="tab" class="tab active" data-cat="grills" aria-selected="true"><i class="fa-solid fa-fire"></i> مشويات</button>
+      <button role="tab" class="tab" data-cat="mains" aria-selected="false"><i class="fa-solid fa-utensils"></i> أطباق رئيسية</button>
+      <button role="tab" class="tab" data-cat="starters" aria-selected="false"><i class="fa-solid fa-seedling"></i> مقبلات</button>
+      <button role="tab" class="tab" data-cat="drinks" aria-selected="false"><i class="fa-solid fa-mug-hot"></i> مشروبات</button>
+      <button role="tab" class="tab" data-cat="desserts" aria-selected="false"><i class="fa-solid fa-cake-candles"></i> حلويات</button>
+    </div>
+    <div id="menuGrid" class="dishes" role="tabpanel"></div>
+  </div>
+</section>
+
+<!-- ===== Opening hours ===== -->
+<section id="hours" class="section band-fire">
+  <div class="container hours">
+    <h2 class="reveal"><i class="fa-regular fa-clock"></i> مواعيد العمل</h2>
+    <dl class="reveal">
+      <div><dt>السبت – الخميس</dt><dd>١٢ ظهرًا – ١٢ منتصف الليل</dd></div>
+      <div><dt>الجمعة</dt><dd>١ ظهرًا – ١٢ منتصف الليل</dd></div>
+      <div><dt>التوصيل</dt><dd>حتى ١١ مساءً</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ===== Gallery ===== -->
+<section id="gallery" class="section">
+  <div class="container">
+    <h2 class="reveal">من مطبخنا وصالتنا</h2>
+    <div class="gallery">
+      <img class="g1" alt="مشويات" src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=70" loading="lazy">
+      <img alt="الصالة" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=70" loading="lazy">
+      <img alt="طبق رئيسي" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=70" loading="lazy">
+      <img alt="سمك" src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=600&q=70" loading="lazy">
+      <img alt="سفرة" src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=600&q=70" loading="lazy">
+      <img alt="سلطات" src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=600&q=70" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ===== Reviews (sample) ===== -->
+<section id="reviews" class="section band-red">
+  <div class="container">
+    <h2 class="reveal">قالوا عننا</h2>
+    <div class="grid3">
+      <blockquote class="review reveal"><span class="stars" aria-label="5 نجوم"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>“المشاوي مستوية على الأصول والخدمة سريعة. هرجع تاني.”<cite>نهى إبراهيم (رأي تجريبي)</cite></blockquote>
+      <blockquote class="review reveal"><span class="stars" aria-label="5 نجوم"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>“الكنافة تجنن، والقعدة مريحة للعيلة والأطفال.”<cite>محمود عادل (رأي تجريبي)</cite></blockquote>
+      <blockquote class="review reveal"><span class="stars" aria-label="4 نجوم"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></span>“أسعار معقولة وأحجام كبيرة. الكفتة أحلى حاجة.”<cite>سارة فؤاد (رأي تجريبي)</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Reservation form ===== -->
+<section id="reserve" class="section">
+  <div class="container narrow">
+    <h2 class="reveal">احجز طاولتك</h2>
+    <form id="reserveForm" class="form" novalidate>
+      <label>الاسم
+        <input type="text" name="name" autocomplete="name" placeholder="اسمك بالكامل">
+        <small class="err" aria-live="polite"></small></label>
+      <label>رقم الموبايل
+        <input type="tel" name="phone" inputmode="tel" autocomplete="tel" placeholder="01XXXXXXXXX" dir="ltr">
+        <small class="err" aria-live="polite"></small></label>
+      <label>عدد الأشخاص
+        <input type="number" name="guests" min="1" max="20" placeholder="مثلًا 4">
+        <small class="err" aria-live="polite"></small></label>
+      <label>التاريخ
+        <input type="date" name="date">
+        <small class="err" aria-live="polite"></small></label>
+      <label>الوقت
+        <input type="time" name="time" min="12:00" max="23:30">
+        <small class="err" aria-live="polite"></small></label>
+      <button type="submit" class="btn btn-red">أرسل الحجز عبر واتساب</button>
+      <p class="hint">سيفتح واتساب برسالة جاهزة تحتوي على بيانات حجزك.</p>
+      <p id="formMsg" class="ok" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ===== Location + map placeholder ===== -->
+<section id="contact" class="section band-sand">
+  <div class="container contact">
+    <div class="reveal">
+      <h2>تلاقينا فين؟</h2>
+      <p><i class="fa-solid fa-location-dot"></i> شارع التحرير، الدقي، الجيزة (عنوان تجريبي)</p>
+      <p><i class="fa-solid fa-phone"></i> <a href="tel:+201000000000" dir="ltr" data-tel>0100 000 0000</a></p>
+      <p><i class="fa-solid fa-car"></i> ركنة سيارات أمام المطعم</p>
+    </div>
+    <!-- Replace src with your own Google Maps "Embed a map" link -->
+    <iframe title="خريطة المطعم" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps?q=Dokki,Giza,Egypt&output=embed"></iframe>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <span>© ٢٠٢٦ مطعم دفء — موقع تجريبي لأغراض العرض فقط.</span>
+    <span class="social"><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="فيسبوك"><i class="fa-brands fa-facebook-f"></i></a><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="إنستجرام"><i class="fa-brands fa-instagram"></i></a></span>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp button -->
+<a class="wa-float" data-wa href="https://wa.me/201000000000" target="_blank" rel="noopener" aria-label="واتساب"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+
+<script src="script.js"></script>
+</body>
+</html>
